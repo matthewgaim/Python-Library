@@ -12,8 +12,9 @@ while True:
                                       scaleFactor=1.05,
                                       minNeighbors=5)
     for x,y,w,h in faces:
-        img = cv2.rectangle(gray, (x,y), (x+w,y+h),(0,255,0),3)
-    cv2.imshow("Capturing",gray)
+        img = cv2.rectangle(frame, (x,y), (x+w,y+h),(0,255,0),3)
+
+    cv2.imshow("Capturing...",frame)
     key = cv2.waitKey(1)
     
     if key == ord('q'):
